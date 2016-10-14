@@ -11,8 +11,8 @@ jpILvYxeXOf9iy0LvHoIgJkKoYq+4nT8TVGf6nwBmrsFKNQUh+q1Q+NjueQBGlBHifV1d/ueIoWtlEdN
 https://europewest.studio.azureml.net/apihelp/workspaces/ae27c32fe7da4c589892bda2373629c3/webservices/954b489e940b4be89fb08492d201be10/endpoints/2cd88bb71cd84474b26bcc319fab5c80/score
 
 ColorEndpoint
-81p+N/ziJtbhRd6avF96pSZafD+20sS3MpUf4Jah6RmJscCnG58I/NOQGpuLgqG3y/93qCskBCTTolWhzSspqQ==
-https://europewest.studio.azureml.net/apihelp/workspaces/ae27c32fe7da4c589892bda2373629c3/webservices/3e74f6c69845462696d383198438cff9/endpoints/e6aca49257b54f6ea01133b5265c037d/score
+/G02jlz+6eOPytDAzUkf7aqIhAjme1XODIByEoGgvvaWXHOiU2C4KD5MhQpEaO6tdH+5bLtMhQ0y+KTKDX3CiA==
+https://europewest.studio.azureml.net/apihelp/workspaces/ae27c32fe7da4c589892bda2373629c3/webservices/b34f986cd21f4fc1b67e828e9a909472/endpoints/1b21057fa8fa466d9f3a299734e977d7/score
 
 AudioConnectEndpoint
 13t2N7fM1/GgDKqor1IVcYdZj/qnt5r+dIukxZQYsHpV1Ol61oP9/Hloo+dukyo2smP9PRnXdI0cvPhioUCaSg==
