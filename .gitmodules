@@ -1,0 +1,3 @@
+[submodule "server-bot"]
+	path = server-bot
+	url = git@github.com:patrick-michelberger/audi-bot.git
