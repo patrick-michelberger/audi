@@ -1,0 +1,12 @@
+send: 'POST /workspaces/ae27c32fe7da4c589892bda2373629c3/services/2cd88bb71cd84474b26bcc319fab5c80/execute?api-version=2.0&details=true HTTP/1.1\r\nAccept-Encoding: identity\r\nContent-Length: 545\r\nHost: europewest.services.azureml.net\r\nUser-Agent: Python-urllib/2.7\r\nConnection: close\r\nContent-Type: application/json\r\nAuthorization: Bearer jpILvYxeXOf9iy0LvHoIgJkKoYq+4nT8TVGf6nwBmrsFKNQUh+q1Q+NjueQBGlBHifV1d/ueIoWtlEdNeEfdzg==\r\n\r\n{"Inputs": {"input1": {"ColumnNames": ["date", "id", "year", "location", "t_m_a3", "t_m_a4", "t_m_a5", "t_m_a6", "t_m_a8", "t_color_gray", "t_color_black", "t_color_white", "t_color_silver", "t_color_blue", "t_g_schalt", "t_g_auto", "t_sitzheizung", "t_connect", "t_allrad", "t_antrieb_e", "modell", "color", "getriebe", "Sitzheizung", "audiconnect", "allrad", "E-antrieb"], "Values": [["value", "0", "0", "value", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "value", "value", "value", "0", "0", "0", "0"]]}}}'
+reply: 'HTTP/1.1 200 OK\r\n'
+header: Content-Length: 742
+header: Content-Type: application/json; charset=utf-8
+header: ETag: "d8d356c3f2d84a8a92e981f3563e1fc9"
+header: Server: Microsoft-HTTPAPI/2.0
+header: x-ms-request-duration: 00:00:00.0343506
+header: x-ms-request-id: 73d28217-314c-44f8-a319-e4eb976ea62f
+header: Date: Fri, 14 Oct 2016 22:41:25 GMT
+header: Connection: close
+{"Results":{"output1":{"type":"table","value":{"ColumnNames":["year","location","t_m_a3","t_m_a4","t_m_a5","t_m_a6","t_m_a8","t_color_gray","t_color_black","t_color_white","t_color_silver","t_color_blue","t_g_schalt","t_g_auto","t_sitzheizung","t_connect","t_allrad","t_antrieb_e","E-antrieb","Scored Probabilities for Class \"False\"","Scored Probabilities for Class \"True\"","Scored Labels"],"ColumnTypes":["Int32","String","Int32","Int32","Int32","Int32","Int32","Int32","Int32","Int32","Int32","Int32","Int32","Int32","Int32","Int32","Int32","Int32","Boolean","Double","Double","Boolean"],"Values":[["0","value","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","False","0.732356609691849","0.267643390308151","False"]]}}}}
+=====================
