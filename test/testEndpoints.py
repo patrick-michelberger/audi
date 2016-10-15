@@ -2,6 +2,10 @@ import urllib2
 # If you are using Python 3+, import urllib instead of urllib2
 import json
 
+h=urllib2.HTTPSHandler(debuglevel=3)
+opener = urllib2.build_opener(h)
+urllib2.install_opener(opener)
+
 endpoints = {
     "SitzheizungEndpoint": {
         "url": "https://europewest.services.azureml.net/workspaces/ae27c32fe7da4c589892bda2373629c3/services/9ebbecbd3b9c4ed5a91abb705d8d7ee5/execute?api-version=2.0&details=true",
@@ -33,12 +37,10 @@ data = {
     "Inputs": {
         "input1":
             {
-                    "ColumnNames": ["id", "date", "year", "location", "t_m_a3", "t_m_a4", "t_m_a5", "t_m_a6", "t_m_a8", "t_color_gray", "t_color_black", "t_color_white", "t_color_silver", "t_color_blue", "t_g_schalt", "t_g_auto", "t_sitzheizung", "t_connect", "t_allrad", "t_antrieb_e", "modell", "color", "getriebe", "Sitzheizung", "audiconnect", "allrad", "E-antrieb"],
-                    "Values": [ [ "0", "value", "0", "value", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "value", "value", "value", "0", "0", "0", "0" ],
-                    [ "0", "value", "0", "value", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "value", "value", "value", "0", "0", "0", "0" ], ]
+                    "ColumnNames": ["date", "id", "year", "location", "t_m_a3", "t_m_a4", "t_m_a5", "t_m_a6", "t_m_a8", "t_color_gray", "t_color_black", "t_color_white", "t_color_silver", "t_color_blue", "t_g_schalt", "t_g_auto", "t_sitzheizung", "t_connect", "t_allrad", "t_antrieb_e", "modell", "color", "getriebe", "Sitzheizung", "audiconnect", "allrad", "E-antrieb"],
+                    "Values": [ [ "value", "0", "0", "value", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "value", "value", "value", "0", "0", "0", "0" ] ]
             },
-        },
-    "GlobalParameters": {}
+        }
 }
 
 body = str.encode(json.dumps(data))
@@ -48,7 +50,9 @@ for name, desc in endpoints.items():
 
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ desc["token"])}
 
+
     req = urllib2.Request(desc["url"], body, headers)
+
 
     try:
         response = urllib2.urlopen(req)
@@ -59,7 +63,7 @@ for name, desc in endpoints.items():
 
         result = response.read()
         print(result)
-    except urllib2.HTTPError, error:
+    except urllib2.HTTPError as error:
         print("The request failed with status code: " + str(error.code))
 
         # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
